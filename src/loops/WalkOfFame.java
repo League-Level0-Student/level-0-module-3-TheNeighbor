@@ -4,16 +4,26 @@
 
 package loops;
 
+import java.awt.Color;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class WalkOfFame {
 	public static void main(String[] args) {
 		Robot rob = new Robot();
-		// 1. Set the X position of the robot so that it starts on the left. 
+		// 1. Set the X position of the robot so that it starts on the left.
+		rob.setX(50);
 		// You also need to show the robot to see the result of this line.
 
 		// 2. Make the robot draw a star shape. Hint: 144.
-
+		rob.penDown();
+		rob.setPenColor(Color.yellow);
+		rob.setPenWidth(10);
+		rob.setSpeed(50);
+		for (int i = 0; i < 5; i++) {
+			rob.move(100);
+			rob.turn(144);
+		}
 		// 3. Set the size of the star to 30.
 
 		/** THE CHALLENGE: **/
